@@ -16,18 +16,16 @@ aString
 
 myVector <- c(1, 2)
 
+# vectors 
+
 myNumbers <- 1:10
-
-# operators
-
-print(myNumbers)
-
-
 
 # getting help 
 ?"<-"
 
 # installing packages
+# these should already be installed
+# in your posit cloud workspace
 
 # install.packages('haven')
 # install.packages('ggplot2')
@@ -57,14 +55,14 @@ bw['USUBJID']
 bw[['USUBJID']]
 bw[,'USUBJID']
 
-# comma seperates rows and
+# comma separates rows and
 # columns, i.e., i-th row, 
-# j-th column i,j
+# j-th column [i,j]
 bw[1,3]
 bw[1, 'USUBJID']
 
 # can also subset for a range
-# i.e., the first tweny-five rows
+# i.e., the first twenty-five rows
 bw[1:25,]
 
 # we can do operations on vectors
@@ -75,7 +73,7 @@ bw['BWSTRESN'] / 1000
 bw['BWSTRESN_KG'] <- bw['BWSTRESN'] / 1000
 
 # Vectors that match will add
-# (or raplce) the column with a vector
+# (or replace) the column with a vector
 # scalar assignment repeats for the length
 # of the dataframe (tibble)
 bw['BWSTRESU_COPY'] <- 'kg'
