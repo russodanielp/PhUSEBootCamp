@@ -52,8 +52,8 @@ bw %>%
 
 heavyPretest <- bw %>%
   filter(BWDY < 0, BWSTRESN > 300) %>%
-  select(USUBJID, BWSTRESN) %>%
-  mutate(body_weight_kg = BWSTRESN / 100)
+  select(USUBJID, BWDY, BWSTRESN) %>%
+  mutate(body_weight_kg = BWSTRESN / 1000)
 
 # we can also use the mutate
 # function to create new columns
