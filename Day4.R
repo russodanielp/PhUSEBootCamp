@@ -117,7 +117,7 @@ oneObs %>%
 
 library(ggplot2)
 
-alopecia %>%
+oneObs %>%
   group_by(CLDY, SET, CLSTRESC) %>%
   summarize(counts = n()) %>%
   filter(SET %in% c('Control Water', 'High Dose')) %>%
